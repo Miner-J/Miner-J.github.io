@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            		article {
+			background-color: #ffffff;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			padding: 20px;
+			border-color: #eaeaea;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+			position: relative;
+		}
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color:yellow;
+        }
+        .Welcome-guide-close{
+            background-color: yellow;
+            border-color: black;
+            color:black;
+            position:absolute;
+            top:40px;
+            left:1125px;
+        }
+        </style>
+        <script>
+            function deletePop(){
+                document.getElementById('welcome').style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <article id="welcome">
+            <button class="Welcome-guide-close" onclick="deletePop()">X</button>
+            <h1>Welcome to the Pokemon TCG club!</h1>
+            <img src="pokeball.png" alt="Pokeball"></img>
+            <a href="PokeWebsiteInstructions.html">Click here to know how the system works.</a>
+        </article>
+    </body>
+</html>
