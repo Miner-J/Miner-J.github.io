@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Save Money With Jacob</title>
+        <script>
+            function calculate(){
+                var anmount = parseInt( document.getElementById("amount").value) ;
+                var rate    = parseFloat( document.getElementById("rate").value) ;
+                var years   = parseInt( document.getElementById("years").value ) ;
+                var total = 0;
+                var totals = [ ] ;
+                for ( var n = 0; n <years; n++){
+                    total = total *(1 + rate / 100) + anmount * 12; 
+                    totals.push( Math.round(total));
+                }
+                document.getElementById("output").innerHTML = "After " + years + " years, you'll have saved $" + Math.round(total) + " total";
+                drawGraph( totals );
+            }
+            function drawGraph(arr) {
+                var canvas = document.getElementById("graph");
+                var ctx = canvas.getContext("2d");
+                var l = arr.length;
+                var w = canvas.width;
+                var h = canvas.height;
+                ctx.clearRect(0,0,w,h);
+                var barw = w/l;
+                var maxval = arr[ arr.length -1];
+                for (var n=0; n < l; n++){
+                    var top = h-( h * arr[n] / maxval);
+                    var left = n * barw;
+                    //fill
+                    ctx.fillStyle="#00aa00";
+                    ctx.fillRect(left, top, barw, h);
+                    ctx.fill();
+                    //text
+                    ctx.fillText(, left, top, h);
+                    //border
+                    ctx.strokeStyle = "#000000";
+                    ctx.beginPath();
+                    ctx.strokeRect(left, top, barw, h);
+                    ctx.stroke();
+
+                    }
+            }
+        </script>
+    </head>
+    <body bgcolor="#aaffaa">
+        <h1> Panthers Savings Calculator </h1>
+        <form>
+            <table>
+                <tbody><tr>
+                    <td>Enter your monthly savings amount (USD): </td>
+                    <td><input type="text" id="amount"></td>
+                </tr>
+                <tr>
+                <td>Enter your annual intrest rate(%): </td>
+                 <td><input type="text" id="rate"></td>
+                </tr>
+                <tr>
+                    <td>Enter the number of years you'll save: </td>
+                    <td><input type="text" id="years"></td>
+                </tr>
+            </tbody></table>
+            <button type="button" onclick="calculate()">Click to calculate your savings.</button>
+            <h3 id="output">See how much you'll save...</h3>
+            <canvas id="graph" width="500" height="300"></canvas>
+    
+       </form></body></html>

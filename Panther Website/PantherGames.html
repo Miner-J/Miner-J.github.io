@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .tabText{
+                font-size:larger;
+            }
+            .tabs{
+                width:150px;
+                height:50px;
+            }
+            .tabs:hover{
+                background-color: rgb(184, 183, 183);
+            }
+            		article {
+			background-color: #ffffff;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			padding: 20px;
+			border-color: #eaeaea;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+			position: relative;
+		}
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        h2{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color:black;
+        }
+        .Welcome-guide-close{
+            background-color: yellow;
+            border-color: black;
+            color:black;
+            position:absolute;
+            top:40px;
+            left:1125px;
+        }
+        a{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        hr{
+            color: white;
+        }
+        .BouncyApp{
+            width:50px;
+            height:50px;
+            background-color: rgb(98, 255, 0);
+
+        }
+        </style>
+        <script>
+            function deletePop(){
+                document.getElementById('welcome').style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <a href="PantherHub.html"><button  id="homeTab"class="tabs"><p class="tabText">Home</p></button></a>
+        <a href="PantherNews.html"><button  class="tabs"><p class="tabText">News</p></button></a>
+        <a href="PantherLearnMore.html"><button  class="tabs"><p class="tabText">Learn More</p></button></a>
+        <a href="PantherGames.html"><button style="background-color: rgb(184, 183, 183);" class="tabs"><p class="tabText">Games</p></button></a>
+        <hr>
+        <h1>Panther Brand Apps</h1>
+        <a><button class="BouncyApp">M</button></a>
+    </body>
+</html>

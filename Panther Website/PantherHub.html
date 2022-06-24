@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .tabText{
+                font-size:larger;
+            }
+            .tabs{
+                width:150px;
+                height:50px;
+            }
+            .tabs:hover{
+                background-color: rgb(184, 183, 183);
+            }
+            		article {
+			background-color: #ffffff;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			padding: 20px;
+			border-color: #eaeaea;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+			position: relative;
+		}
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color:black;
+        }
+        .Welcome-guide-close{
+            background-color: yellow;
+            border-color: black;
+            color:black;
+            position:absolute;
+            top:40px;
+            left:1125px;
+        }
+        a{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        hr{
+            color: white;
+        }
+        </style>
+        <script>
+            function deletePop(){
+                document.getElementById('welcome').style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <a href="PantherHub.html"><button style="background-color: rgb(184, 183, 183);" id="homeTab"class="tabs"><p class="tabText">Home</p></button></a>
+        <a href="PantherNews.html"><button  class="tabs"><p class="tabText">News</p></button></a>
+        <a href="PantherLearnMore.html"><button  class="tabs"><p class="tabText">Learn More</p></button></a>
+        <a href="PantherGames.html"><button class="tabs"><p class="tabText">Games</p></button></a>
+        <hr>
+        <article id="welcome">
+            <button  style="background: gray;"class="Welcome-guide-close" onclick="deletePop()">X</button>
+            <h1>Welcome to the Panthers website.</h1>
+            <img src="PantherLogo.jpg" alt="PantherLogo" height="200px" width="196px"></img>
+            <p><cite>PantherLogo</cite></p>
+            <hr>
+            <h2>What is Panthers</h2>
+            <p>The group "Panthers" is a group were</br>
+            People can play games and have a fun time with friends.</br>
+        People can also learn skills and can suggest ideas to the council.</br>
+         If you want to learn more <a href="PantherLearnMore.html">click this link.</a></br>
+            </br>
+        -TheCodeMaster </p>
+        </article>
+    </body>
+</html>
